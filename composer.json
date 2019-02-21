@@ -1,0 +1,28 @@
+{
+  "name": "xiaolin/id",
+  "description": "config",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "小林",
+      "email": "462441355@qq.com"
+    }
+  ],
+  "autoload": {
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    },
+    "files": [
+    ]
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^4.1",
+    "phpunit/phpunit": ">=5.6"
+  }
+}
