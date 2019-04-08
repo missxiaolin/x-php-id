@@ -10,10 +10,6 @@ namespace Lin\Snowflake;
 
 use Lin\Snowflake\Exceptions\SnowflakeException;
 
-/**
- * Class Client
- * @package Lin\Snowflake
- */
 abstract class Client implements ClientInterface
 {
     protected static $_instance;
@@ -21,16 +17,10 @@ abstract class Client implements ClientInterface
     /** @var  integer 毫秒 */
     protected $beginAt;
 
-    /**
-     * Client constructor.
-     */
     private function __construct()
     {
     }
 
-    /**
-     * @return Client
-     */
     public static function getInstance()
     {
         if (isset(static::$_instance) && static::$_instance instanceof ClientInterface) {
@@ -41,16 +31,16 @@ abstract class Client implements ClientInterface
     }
 
     /**
-     * @desc   返回起始时间 毫秒
-     * @return int
-     * @throws SnowflakeException
+     * 返回起始时间 秒
+     * @return false|int
      */
     public function getBeginAt()
     {
         if (isset($this->beginAt) && is_numeric($this->beginAt)) {
             return $this->beginAt;
         }
-        return strtotime('2017-01-01') * 1000;
+
+        return strtotime('2017-01-01');
     }
 
     /**
@@ -74,7 +64,7 @@ abstract class Client implements ClientInterface
         $time = $this->getBeginAt();
 
         if (!isset($currentTime)) {
-            $currentTime = intval(microtime(true) * 1000);
+            $currentTime = time();
         }
 
         $bit1 = str_pad(decbin($currentTime - $time), 41, '0', STR_PAD_LEFT);
