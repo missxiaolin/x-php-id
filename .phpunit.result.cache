@@ -1,0 +1,1 @@
+C:30:"PHPUnit\Runner\TestResultCache":262:{a:2:{s:7:"defects";a:2:{s:32:"Tests\Test\BaseTest::testExample";i:4;s:28:"Tests\Test\BaseTest::testMax";i:4;}s:5:"times";a:3:{s:30:"Tests\Test\BaseTest::testTable";d:0.002;s:32:"Tests\Test\BaseTest::testExample";d:0.001;s:28:"Tests\Test\BaseTest::testMax";d:0;}}}
