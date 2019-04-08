@@ -7,6 +7,7 @@
 // | Author: xiaolin <462441355@qq.com> <https://github.com/missxiaolin>
 // +----------------------------------------------------------------------
 namespace Tests;
+
 use Lin\Swoole\Common\File\File;
 use Lin\Swoole\Common\Redis\Redis;
 use PHPUnit\Framework\TestCase as UnitTestCase;
